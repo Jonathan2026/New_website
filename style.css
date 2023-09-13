@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+img {
+    border-radius: 20px;
+     vertical-align: middle;
+}
+ 
+p{
+    font-weight: 500;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+@keyframes h1Animate {
+    from {
+        opacity: 0.5;
+        transform: translateX(-1000px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes rainbow /*CSS animation for rainbow*/ {
+    /*this percent into the animation, goes horizontal, vertical*/
+        0%{background-position: 0% 82%}
+        50%{background-position: 100% 19%}
+        100%{background-position: 0% 82%}
+}
+
+#About_me{
+    animation: opacity 4s ease;
+}
+
+section .animate{
+    animation: opacity 4s ease;
+}
+
+#AboutMeH1{
+    animation: h1Animate 2s ease-in;
+}
+
+#Name{
+    animation: h1Animate 3s ease-in;
+}
+
+#family{
+    width: 500px;
+    text-align: center;
+    display: block;
+    padding: 15px;
+    border-radius: 25px;
+
+}
+
+#family-and-interests{
+    display: flex;
+    justify-content: space-around;
+}
+body{
+    font-family: Poppins;
+    background-color: #003366;
+    text-align: center;
+}
+nav{
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    background-color:  #004080;
+    font-size: larger;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a::before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 25px;
+    transform: scaleX(0);
+    background: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover:before{
+    transform: scaleX(1);
+}
+
+#About_me h1::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: dodgerblue;
+    animation: load 2s linear;
+}
+
+@keyframes load{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+nav a:active{
+    transform: scale(0.9);
+}
+
+.item:hover{
+    opacity: 0.5;
+}
+
+p{
+    font-size: large;
+}
+
+.back{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#interests{
+    width: 500px;
+    text-align: center;
+    display: block;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+#family-and-interests{
+    text-align: center;
+}
+
+a{
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+/*circles in images*/
+#About_me img{
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;/*how big/ the shape*/
+    padding: 3px;/*thickness of border*/
+    background: linear-gradient(90deg, red, blue, green, aqua, purple);
+    background-size: 1500% 1500%;
+    animation: rainbow 18s ease infinite;
+}
+
+#contacts img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;/*how big/ the shape*/
+    padding: 3px;/*thickness of border*/
+    background: linear-gradient(90deg, red, blue, green, aqua, purple);
+    background-size: 1500% 1500%;
+    animation: rainbow 18s ease infinite;
+}
+
+#classes9{
+    text-align: left;
+    display: flex;
+    padding: 15px;
+}
+
+#grade{
+    display: block;
+}
+
+#grade_title{
+    display: flex;
+    justify-content: space-around;
+}
+
+#Projects{
+    text-align: center;
+    font-size: larger;
+    padding: 15px;
+    
+}
+
+.showProjects{
+    margin: 100px;
+}
+
+.showProjects img{
+    margin-right: 100px;
+    margin-bottom: 60px;
+}
+
+.animate{
+    animation: opacity 4s ease;
+}
+
+#Curriculars img{
+    margin-right: 100px;
+    margin-bottom: 60px;   
+}
+
+#Circles{
+    padding: 20px;
+    display: flex;
+}
+
+#Circles img:hover{
+    transform: scale(1.1);
+}
+
+#Demo{
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+}
+
+#Demo img:hover{
+    transform: scale(1.1);
+}
+
+
+#Ping-Pong-Image{
+    border-radius: 8px;
+}
+#Ping-Pong{
+    font-size: large;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+}
+
+#Ping-Pong img:hover{
+    transform: scale(1.1);
+}
+
+#order{
+    color: rgb(255, 157, 10);
+}
+
+#Extra{
+    text-align: center;
+    padding: 15px;
+}
+#Curriculars{
+    display: block;
+    justify-content: space-around;
+}
+#COV{
+    text-align: center;
+    display: flex;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+#Court{
+    text-align: center;
+    display: flex;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+#ASC{
+    display: flex;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+#resume img{
+    background-color: rgb(146, 146, 146);
+    padding: 15px;
+    border-radius: 25px; 
+}
+
+#resume img:hover{
+    transform: scale(1.1);
+}
+
+.back img:hover{
+    transform: scale(1.1);
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.show img{
+    animation:h1Animate 3s ease ;
+}

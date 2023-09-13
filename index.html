@@ -1,0 +1,519 @@
+<!--This is for the prior project project-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Garcia-Nieto's Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: Verdana, sans-serif;
+        }
+        
+        img {
+            border-radius: 20px;
+             vertical-align: middle;
+        }
+         
+        p{
+            font-weight: 500;
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+        }
+        
+        @keyframes h1Animate {
+            from {
+                opacity: 0.5;
+                transform: translateX(-1000px);
+            }
+        
+            to{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+            
+        }
+        
+        @keyframes opacity {
+            from{
+                opacity: 0;
+            }
+        
+            to{
+                opacity: 1;
+            }
+            
+        }
+        
+        @keyframes rainbow /*CSS animation for rainbow*/ {
+            /*this percent into the animation, goes horizontal, vertical*/
+                0%{background-position: 0% 82%}
+                50%{background-position: 100% 19%}
+                100%{background-position: 0% 82%}
+        }
+        
+        #About_me{
+            animation: opacity 4s ease;
+        }
+        
+        section .animate{
+            animation: opacity 4s ease;
+        }
+        
+        #AboutMeH1{
+            animation: h1Animate 2s ease-in;
+        }
+        
+        #Name{
+            animation: h1Animate 3s ease-in;
+        }
+        
+        #family{
+            width: 500px;
+            text-align: center;
+            display: block;
+            padding: 15px;
+            border-radius: 25px;
+        
+        }
+        
+        #family-and-interests{
+            display: flex;
+            justify-content: space-around;
+        }
+        body{
+            font-family: Poppins;
+            background-color: #003366;
+            text-align: center;
+        }
+        nav{
+            position: sticky;
+            overflow: hidden;
+            top: 0;
+            background-color:  #004080;
+            font-size: larger;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        nav a::before{
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            border-radius: 25px;
+            transform: scaleX(0);
+            background: #ffffff;
+            transition: transform 0.3s ease;
+        }
+        
+        nav a:hover:before{
+            transform: scaleX(1);
+        }
+        
+        #About_me h1::before{
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            width: 100%;
+            color: dodgerblue;
+            animation: load 2s linear;
+        }
+        
+        @keyframes load{
+            from{
+                width: 0;
+            }
+        
+            to{
+                width: 100%;
+            }
+        }
+        
+        nav a:active{
+            transform: scale(0.9);
+        }
+        
+        .item:hover{
+            opacity: 0.5;
+        }
+        
+        p{
+            font-size: large;
+        }
+        
+        .back{
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        #interests{
+            width: 500px;
+            text-align: center;
+            display: block;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        
+        #family-and-interests{
+            text-align: center;
+        }
+        
+        a{
+            color: #CCCCCC;
+            text-decoration: none;
+        }
+        
+        /*circles in images*/
+        #About_me img{
+            width: 150px;
+            height: 100px;
+            border-radius: 50%;/*how big/ the shape*/
+            padding: 3px;/*thickness of border*/
+            background: linear-gradient(90deg, red, blue, green, aqua, purple);
+            background-size: 1500% 1500%;
+            animation: rainbow 18s ease infinite;
+        }
+        
+        #contacts img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;/*how big/ the shape*/
+            padding: 3px;/*thickness of border*/
+            background: linear-gradient(90deg, red, blue, green, aqua, purple);
+            background-size: 1500% 1500%;
+            animation: rainbow 18s ease infinite;
+        }
+        
+        #classes9{
+            text-align: left;
+            display: flex;
+            padding: 15px;
+        }
+        
+        #grade{
+            display: block;
+        }
+        
+        #grade_title{
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        #Projects{
+            text-align: center;
+            font-size: larger;
+            padding: 15px;
+            
+        }
+        
+        .showProjects{
+            margin: 100px;
+        }
+        
+        .showProjects img{
+            margin-right: 100px;
+            margin-bottom: 60px;
+        }
+        
+        .animate{
+            animation: opacity 4s ease;
+        }
+        
+        #Curriculars img{
+            margin-right: 100px;
+            margin-bottom: 60px;   
+        }
+        
+        #Circles{
+            padding: 20px;
+            display: flex;
+        }
+        
+        #Circles img:hover{
+            transform: scale(1.1);
+        }
+        
+        #Demo{
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+        }
+        
+        #Demo img:hover{
+            transform: scale(1.1);
+        }
+        
+        
+        #Ping-Pong-Image{
+            border-radius: 8px;
+        }
+        #Ping-Pong{
+            font-size: large;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+        }
+        
+        #Ping-Pong img:hover{
+            transform: scale(1.1);
+        }
+        
+        #order{
+            color: rgb(255, 157, 10);
+        }
+        
+        #Extra{
+            text-align: center;
+            padding: 15px;
+        }
+        #Curriculars{
+            display: block;
+            justify-content: space-around;
+        }
+        #COV{
+            text-align: center;
+            display: flex;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        
+        #Court{
+            text-align: center;
+            display: flex;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        
+        #ASC{
+            display: flex;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        
+        #resume img{
+            background-color: rgb(146, 146, 146);
+            padding: 15px;
+            border-radius: 25px; 
+        }
+        
+        #resume img:hover{
+            transform: scale(1.1);
+        }
+        
+        .back img:hover{
+            transform: scale(1.1);
+        }
+        
+        .hidden {
+            opacity: 0;
+            transition: all 2s;
+        }
+        
+        .show {
+            opacity: 1;
+        }
+        
+        .show img{
+            animation:h1Animate 3s ease ;
+        }
+    </style>
+</head>
+<body>
+    </div>
+    <nav>
+        
+        <a href="#About_me"><div class="item">About Me</div></a>
+        <a href="#resume"><div class="item">Resume</div></a>
+        <a href='#Academics'><div class="item">Academics</div></a>
+        <a href="#Projects"><div class="item">Projects</div></a>
+        <a href="#Extra"><div class="item">Extra Curriculars</div></a>
+        <a href="#contacts"><div class="item">Contact Me</div></a>
+    </nav>
+
+    <div id="About_me">
+        <h1 data-text="My name is Jonathan Garcia-Nieto" id="Name">My name is Jonathan Garcia-Nieto</h1>
+        <img src="images/me.jpg" alt="Beautiful Picture of me">
+        <h1 data-text="About Me" id="AboutMeH1">About Me</h1>
+        <br>
+        <h3> I am a 15 year old rising Sophmore at Sedro-Woolley High School</h3>
+        <h3> with an interst in coding.</h3> 
+    </div>
+
+    
+    <div id = "family-and-interests">
+        <div id = family>
+            <h2>Family</h2>
+            <p>I am a part of a family of 5. I have 3 brothers, with me being the second oldest. In close vacinity to me, I have my grandmother in the same neighborhood as me, and an aunt 5 minutes away. While family that close can cause you to be annoyed by them, I love my family and always will cherish them</p>
+        </div>
+        
+        <div id = "interests">
+            <h2>My interests</h2>
+            <p>While I have a passion for coding, other interests or hobbies I have include knitting, game development, building legos, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas quaerat laudantium corrupti dolore saepe minus exercitationem qui? Voluptas quas autem enim laudantium in. Quas molestias, repellat odit exercitationem amet totam?</p>
+            </a>
+        </div>
+    </div>
+    <br>
+    
+    <div id="resume">
+        <h1>Resume</h1>
+        <p>Click the Picture to see my resume</p>
+        <a href="images/Jonathan Garcia-Nieto Resume.pdf" target="_blank"><img src="images/Resume.png" alt="" height="300px"></a>
+    </div>
+
+    <br>
+    <div id="Academics">
+        <h1>Academics</h1>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD+0lEQVR4nO2WTWwbRRTHJwXxdSgIwQUJJBBCAiQ4VNk1JMJCJLObJt5xQk1oQ9M0TQNRm+ar7kxC6KYINUkTe9aYL3fGPcDNEoeqN+DIgUOpirhxQrS0lEogUZBa1OahWeLEru00sdd2LPkvPXm19u78/m/ee2OE6qqrrrrqqstjvbt46nHK5Tzj4lcV6lrdQ5tdLCa2US4+Z1z+yxwJmUEdeYtyeWYyKprQZpJt21toVASYI76+HbpgcHmW8mSvbdt3Vw889sVW6sgRysXP6wbP3ZVLlIuZsYh4uGLgLJp8ijlijjriz2LBc4xweY1xmTjCxbNlA6dOspk5MsW4uOkVOMvTJ6oUVUkigIaSoW07dQ9zZIg64rtyQbOCfSLOs5gYHIuk7t8w+GQs+SjjkjIuL1Qc3MmJK6pkw3H52B3B2eLJZ6gjY5TLfzYBOGSXl7ihRvSkI17IpgZoYNFki5rRjIslrxZs7e6DpvYd7mdw3zD0jE7B29OzMDb/sRe98q0q7VAqdReiXHxTjozh7j7QDZI3mjp2gLGzH7r2j8Du8Wl45+g8TCx8svF1uPwKMS7OlWvbDy98CkP2CegdPwqvD46CuWsAmjtCaxrDb+6Fzv3D8JbasfdmYeLEGsa4PIuGY7F71alIufixUvU8OhuHwelZ6BmZgs59wyvlVsjYK6Qb2noGoC9sL4OLn9QhaicSD+TMeq97wUtjPrPz1rrOCBYRT6tpxBzxdzWMsOwyuX7gWOTLtIkNnQd0LvGg2qrRuXjFwcfnPwL1P2l8MfGIYinKQFq+tiAE9gzB0MxC2cEPvh9xm/il7V1ZsCUZyGyoljd6oS88o7LjGTR1JAxMHXenVOZaZTGQDn9wJ+w6xNxRWSx4OPKZO2Jf7erJO33KaiAdL7d3uVt+6ANn3eAjxz+E0NAENHcUHp0VM7Ay4gwC23cPuodPIfADxyJA+g+Czwze8X16pQ1k9Uloj9sn4UjCDXWt7m30PahaBjJ3RUWxz6NqGyg1UN3AsjRs/V7p7GuGdQV5VUKaQY5U3AAmhz0zgBBq0DBxdIMsVQB+STdIVK25mkCrfeX71mBbsSaQeljD5FwZs/69DwfMnHWxdWH1d9YvqEQ1+AyrRcOW0DG5WjI4Jlc1g5xsNMlrmVlPy+/336cb1rWMZ/5S95Ansu0tjUbgeQ1b/arENExOa5j8oGFyUcPkDw1bN/8PdU0u6oZ1fvk3jo6tvZppPafesdYSumHxPDsVQbUiHZPLuROK/IZq2YCOyWVUK9INEs/TO3FUK9rW0vGEhsn11exbN7TWwJOolqRnNbLFUa1JM82t7lmArUsv+slDqBbVaFqdKqrNURe6Tf8B4r/Vsqv3fMUAAAAASUVORK5CYII=" width = 150px>
+        <h2>I attend Sedro-Woolley High School</h2>
+        <div id="grade_title">
+            <h3>Grade 9</h3>
+            <h3>Grade 10</h3>
+            <h3>Grade 11</h3>
+            <h3>Grade 12</h3>
+        </div>
+        <div id="classes9">
+            <div id="grade">
+                <h4>Semester One</h4>
+                <ul>
+                    <li>Spanish 1</li>
+                    <li>Avid 9</li>
+                    <li>AMPED Algebra</li>
+                    <li>Honors English 9</li>
+                    <li>Biology</li>
+                    <li>P.E.</li>
+                    <li>AMPED Algebra</li>
+                    <li>Computer Science</li>
+                </ul>
+            </div>
+        <div id="grade">
+            <h4>Semester Two</h4>
+            <ul>
+                <li>Spanish I</li>
+                <li>Avid 9</li>
+                <li>AMPED Algebra</li>
+                <li>Honors English 9</li>
+                <li>Biology</li>
+                <li>P.E.</li>
+                <li>AMPED Algebra</li>
+                <li>Marketing</li>
+            </ul>
+        </div>
+        <div id="grade">
+            <h4>Semester One</h4>
+            <ul>
+                <li>P.E.</li>
+                <li>AP Human Geography</li>
+                <li>Geometry</li>
+                <li>Avid 10</li>
+                <li>Honors English 10</li>
+                <li>Physics</li>
+                <li>Spanish II</li>
+                <li>Ceramics I</li>
+            </ul>
+        </div>
+
+        <div id="grade">
+            <h4>Semester Two</h4>
+            <ul>
+                <li>Computer Science II</li>
+                <li>AP Human Geography</li>
+                <li>Geometry</li>
+                <li>Avid 10</li>
+                <li>Honors English 10</li>
+                <li>Physics</li>
+                <li>Spanish II</li>
+                <li>Ceramics II</li>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+    <br>
+    <div id="Projects">
+        <h1>Projects</h1>
+        <p>Other than this website, I have coded other projects in school, the All Star Code program, and more!</p>  
+        <p id = "order">To view the projects, simply click on the images.</p>
+        <div class="showProjects">
+            <section class="hidden">
+                <div id = Ping-Pong>
+                    <a href="https://jonathan2026.github.io/Ping-Pong/" target = "_blank"><img id="Ping-Pong-Image" src="images/Ping Pong.png" alt="" width = "250px" height = "150px"></a>
+                    <p>This Ping Pong game is the first game that I made, where my group had one day to create. I enjoyed the process, working with others, building the game in little time.</p>
+                </div>
+
+                <div id="Circles">
+                    <a href="https://jonathan2026.github.io/Plane-Game/" target="_blank"><img src="images/circles.png" alt="" width="250px"></a>
+                    <p>After learning that I want to become a game developer, I wanted to expand my knowledge and make more games.</p>
+                </div>
+            
+                <div id="Demo">
+                    <a href="https://jonathan2026.github.io/Safety-First/" target="_blank"><img src="images/Demo.png" alt="" width="250px" height="175px"></a>
+                    <p>Toward the end of the 2023 All Star Code Summer Intensive, we were instructed to create a website that tackles an issue in the world.  My group decided to create a website regarding Gun Violence.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div id="Extra">
+        <br>
+        <h1>Extra-Curriculars</h1>
+        <br>
+        <div id = "Curriculars">
+            <div id = "COV">
+                <img src="images/COV-logo.png" alt="" width="100px">
+                <p>Childern of the Valley is an organization that helps underachieving students and helps them learn, be respectful, and caring.  While volunteering there, I would help kids with subjects that they were struggling with, connect with the children there, and help teachers with a variety of things</p>
+            </div>
+            
+            <div id = "Court">
+                <img src="images/teen-court.png" alt width="100px">
+                <p>Teen Court is a High School Club with the purpose of showing High School Students the court process and how court proceedings work. I would sign up for a role(jury, judge, clerk, etc.),and study the lines of a script and your responsibilities to prepare for court, which would take place on the 3rd Wednesday each month.</p>
+            </div>
+
+            <div id="ASC">
+                <img src="images/ASC.png" alt="" height="100px">
+                <p>All Star Code is a Summer Intensive that last 6 weeks that will teach game and web design, HTMl, CSS, and Javascript code.  This coding intensive brought me into a brotherhood, with others across the United States which I still talk to to this day.</p>
+            </div>
+        </div>
+    </div>
+    <div id="contacts">
+        <h1>Contacts</h1>
+        <p>Click the images</p>
+        <div class="back">
+            <a href="https://github.com/Jonathan2026" target="_blank"><img src="images/GitHub-Mark.png" alt="" width="100px"></a>
+            <a href="https://www.instagram.com/jonny2026insta/" target="_blank"><img src="images/Instagram_logo.webp" alt="" width="100px"></a>
+            <a href="mailto:jgn2026@gmail.com"><img width="100" height="100" src="https://img.icons8.com/plasticine/100/gmail.png" alt="gmail" width="100px"/></a>
+        </div>
+            
+    </div>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        }
+
+        else{
+            entry.target.classList.remove('show')
+        }
+    });
+});
+const projects = document.querySelectorAll('.hidden')
+projects.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
